@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#00FF85"
+            android:textSize="18sp"
+            android:text="Lat."/>
+
+        <EditText
+            android:id="@+id/etLat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF85"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#F44336"
+            android:textSize="18sp"
+            android:text="Lng."/>
+
+        <EditText
+            android:id="@+id/etLng"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#F44336"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGotoLatLng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goto Manually Entered Lat Lng"
+        android:onClick="onClick"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnZoomOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Zoom Out"
+            android:layout_weight="1"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btnZoomIn"
+            android:layout_width="0dp"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zoom In"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etSearchByLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Address or Key Place"/>
+
+    <Button
+        android:id="@+id/btnGeoCodingSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search By Address or Place"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnChangeMapTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Map Types"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnMoveToLastKnownLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move to Last Known Location"
+        android:onClick="onClick"/>
+
+</LinearLayout>
